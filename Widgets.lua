@@ -372,7 +372,7 @@ function UI.Bar(parent, height)
 	return bar
 end
 
-function UI.Movable(frame, db, onMoved)
+function UI.Movable(frame, db, onMoved, plain)
 	frame:SetMovable(true)
 	frame:SetClampedToScreen(true)
 	function frame:Restore()
@@ -399,6 +399,7 @@ function UI.Movable(frame, db, onMoved)
 		if onMoved then onMoved() end
 	end
 	frame:Restore()
+	if not plain and A.RegisterMover then A.RegisterMover(frame, db, onMoved) end
 	return frame
 end
 
@@ -410,7 +411,7 @@ function UI.Window(name, title, width, height, db)
 	frame:Hide()
 	UI.Fill(frame, C.bg)
 	UI.Border(frame)
-	UI.Movable(frame, db)
+	UI.Movable(frame, db, nil, true)
 	if name and UISpecialFrames then table.insert(UISpecialFrames, name) end
 
 	local bar = CreateFrame("Frame", nil, frame)

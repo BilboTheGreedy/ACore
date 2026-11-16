@@ -3,9 +3,12 @@
 ## Notes: Shared look and widgets for the A addons
 ## Version: 0.1.0
 ## IconTexture: Interface\Icons\INV_Misc_Gear_01
+## OptionalDeps: ABug
 ## AddonCompartmentFunc: ACore_OnCompartmentClick
 ## SavedVariables: ACoreDB
 
 Core.lua
+Layout.lua
 Widgets.lua
 Launcher.lua
+Panel.lua
