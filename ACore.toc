@@ -1,0 +1,11 @@
+## Interface: 16001
+## Title: ACore
+## Notes: Shared look and widgets for the A addons
+## Version: 0.1.0
+## IconTexture: Interface\Icons\INV_Misc_Gear_01
+## AddonCompartmentFunc: ACore_OnCompartmentClick
+## SavedVariables: ACoreDB
+
+Core.lua
+Widgets.lua
+Launcher.lua
